@@ -43,7 +43,7 @@ const Navbar = () => {
             <button ref={buttonRef} className={`${showNavbar ? 'first' : 'second'} lg:hidden`}>
                 {buttonType === 'open' ? <Menu onClick={() => setShownavbar(!showNavbar)} className='text-white !h-8 !w-8'/> : <Close onClick={() => setShownavbar(!showNavbar)} className='text-white !h-8 !w-8'/>}
             </button>         
-            <div className={`top-[68px] w-full bg-black lg:bg-inherit h-max absolute left-0 lg:relative lg:top-auto lg:left-auto lg:w-max`}>
+            <div className={`top-[60px] w-full bg-black lg:bg-inherit h-max absolute left-0 lg:relative lg:top-auto lg:left-auto lg:w-max`}>
                 <ul className={`${showNavbar ? 'h-[280px]' : 'h-0'} flex w-full items-center justify-center flex-col transition-all duration-500 lg:flex-row lg:h-full lg:w-max`}>
                     <li className={`${showNavbar ? 'opacity-100' : 'opacity-0'} navbar-item ${currentSection === 'projects' && window.innerWidth > 1024 && 'after:content-[""] font-medium text-white'} text-[#ccc]`} onClick={() => scrollFunction(projectsRef)}>PROJECTS</li>
                     <li className={`${showNavbar ? 'opacity-100' : 'opacity-0'} navbar-item ${currentSection === 'skills' && window.innerWidth > 1024 && 'after:content-[""] font-medium text-white'} text-[#ccc]`} onClick={() => scrollFunction(skillsRef)}>SKILLS</li>
