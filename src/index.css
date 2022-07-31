@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: 'Montserrat';
+}
+
+
+textarea{
+  resize: none;
+}
+
+
+
+@layer components {
+
+  *{
+    @apply scrollbar-hide;
+  }
+
+  .navbar-item {
+    @apply px-4 flex items-center justify-center py-5 text-sm font-medium transition-all relative duration-500 md:text-sm lg:font-normal hover:scale-[1.07] lg:py-0 lg:h-full cursor-pointer;
+
+  }
+
+  .navbar-item::after{
+    @apply w-[6px] h-[6px] absolute bottom-[-15px] left-[45%] rounded-full text-white bg-white transition-all duration-500;
+  }
+
+  .project{ 
+    @apply h-[300px] w-[90%] bg-white my-8 flex flex-col hover:scale-[1.02] transition-all duration-[.7s] max-w-[420px] rounded-xl relative;
+  }
+
+  .skill {
+    @apply max-w-[170px] w-[140px] h-[140px] flex flex-col items-center justify-evenly rounded-xl bg-[#111] relative transition-all duration-500;
+  }
+
+}
+
+
+.first {
+  animation: first .5s ease;
+}
+
+.second {
+  animation: second .5s ease;
+}
+
+.logo {
+  font-family: 'Edu VIC WA NT Beginner';
+  font-size: 27px;
+}
+
+.projects{
+  background: rgb(29,55,75);
+background: linear-gradient(90deg, rgba(29,55,75,0.9360119047619048) 0%, rgba(9,0,38,1) 100%, rgba(0,19,34,0) 100%);
+}
+
+.skills {
+  background: rgb(29,55,75);
+  background: linear-gradient(90deg, rgba(29,55,75,0.9360119047619048) 0%, rgba(9,0,38,1) 100%, rgba(0,19,34,0) 100%);
+}
+
+.aboutme{
+  background: rgb(29,55,75);
+background: linear-gradient(90deg, rgba(29,55,75,0.9360119047619048) 0%, rgba(9,0,38,1) 100%, rgba(0,19,34,0) 100%);
+}
+
+.contact{
+  background: rgb(29,55,75);
+  background: linear-gradient(90deg, rgba(29,55,75,0.9360119047619048) 0%, rgba(9,0,38,1) 100%, rgba(0,19,34,0) 100%);
+}
+
+
+.introduccion{
+  background-image: url('/portfolio-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+svg:hover{
+  transform: rotate(360deg);
+  transition: transform .7s ease
+}
+
+.title {
+  display: block;
+  position: relative;
+  line-height: 1.1;
+  padding: 0 15px;
+}
+
+
+.daniel::before{
+  background: rgb(0,212,255);
+  background: linear-gradient(90deg, rgba(0,212,255,0.9360119047619048) 0%, rgba(235,217,10,1) 100%, rgba(2,0,36,0) 100%);
+  content: "Daniel";
+  position: absolute;
+  inset: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: animated 6s infinite;
+  animation-delay: 0s;
+}
+
+.colorado::before{
+  background: linear-gradient(90deg, #14B3E8, #BA4BDB);
+  content: "Colorado";
+  position: absolute;
+  inset: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: animated 6s infinite;
+  animation-delay: 2.22s;
+}
+
+
+.fullstack::before{
+  background: linear-gradient(90deg, #FF4D4D,#F9CB28);
+  content: "Full stack";
+  position: absolute;
+  inset: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: animated 6s infinite;
+  animation-delay: 4.44s;
+}
+
+
+.developer::before{
+  background: linear-gradient(90deg, #FF4D4D, #F9CB28);
+  content: "developer";
+  position: absolute;
+  inset: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: animated 6s infinite;
+  animation-delay: 4.44s; 
+}
+
+
+.prev {
+  animation: intersecting .7s forwards;
+}
+
+.after {
+  animation: notIntersecting .7s forwards;
+}
+
+
+@keyframes intersecting {
+  from {
+    opacity: 0;
+    top: 20px;
+  }
+  to {
+    opcity: 1;
+    top: 0;
+  }
+}
+
+
+@keyframes notIntersecting {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opcity: 0;
+    top: 20px;
+  }
+}
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes first {
+  from {
+    transform: rotate(0deg);
+  } 
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+
+@keyframes second {
+  from {
+    transform: rotate(360deg);
+  } 
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+@keyframes animated {
+  0%, 16.66%, 100% {
+    opacity: 1;
+  }
+
+  33.33%, 83.333% {
+    opacity: 0
+  }
+
+}
+
+
+.input-container {
+  min-width: 330px;
+  width: 100%;
+  position: relative;
+  margin: 15px 0;
+}
+
+.label {
+  position: absolute;
+  left: 10px;
+  top: 14px;
+  transition: all .2s;
+  padding: 0 2px;
+  z-index: 1;
+  color: #b3b3b3;
+}
+
+.text-input {
+  padding: .8rem;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #2f2c45;
+  background: #272530;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  transition: all .3s;
+  color: #fff;
+}
+
+.label::before {
+  content: "";
+  height: 5px;
+  background: #272530;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  width: 100%;
+  z-index: -1;
+
+}
+
+.text-input:focus{
+  border: 2px solid #7e4ccb;
+}
+
+.text-input:focus + .label, .filled {
+  top: -10px;
+  color: #7e4ccb;
+  font-size: 14px;
+}
+
+.text-input::placeholder {
+  color: #aaa;
+  font-size: 16px;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.text-input:focus::placeholder {
+  opacity: 1;
+}

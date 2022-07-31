@@ -1,0 +1,5 @@
+export const chatStack = ['/next.png',  '/react.png', '/node.png', '/express.png', '/firebase.png', '/socket.png', '/mongodb.png']
+export const movieStack = ['/sass.png', '/react.png', '/axios.png', '/swiper.svg']
+export const youtubeStack = ['/react.png', '/redux.png', '/axios.png', '/firebase.png']
+export const memoriesStack = ['/react.png', '/redux.png', '/axios.png', '/thunk.jpeg', '/mongodb.png', '/express.png', '/node.png']
+export const googleStack = ['/react.png', '/axios.png', '/styled-components.png']
