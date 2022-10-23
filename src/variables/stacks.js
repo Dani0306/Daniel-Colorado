@@ -3,4 +3,4 @@ export const movieStack = ['/sass.png', '/react.png', '/axios.png', '/swiper.svg
 export const youtubeStack = ['/react.png', '/redux.png', '/axios.png', '/firebase.png']
 export const memoriesStack = ['/react.png', '/redux.png', '/axios.png', '/thunk.jpeg', '/mongodb.png', '/express.png', '/node.png']
 export const googleStack = ['/react.png', '/axios.png', '/styled-components.png']
-export const padletStack = ["/next.png", "/axios.png" , "/mongogdb.png", "/express.png", "/node.png", "/tailwind.png"]
+export const padletStack = ["/next.png", "/axios.png" , "/mongodb.png", "/express.png", "/node.png", "/tailwind.png"]
