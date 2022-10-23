@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Project from './Project'
 import { useObserver } from '../hooks/useObserver'
 import { useAppContext } from '../context/AppContext'
-import { chatStack, movieStack, youtubeStack, memoriesStack, googleStack } from '../variables/stacks'
-import { memoriesLink, moviesLink, chatLink, youtubeLink, googleLink } from '../variables/links'
-import { youtubeRepository, chatRepository, memoriesRepository, movieRepository, googleRepository } from '../variables/repositoryLink'
+import { chatStack, movieStack, youtubeStack, memoriesStack, googleStack, padletStack } from '../variables/stacks'
+import { memoriesLink, moviesLink, chatLink, youtubeLink, googleLink, padletLink } from '../variables/links'
+import { youtubeRepository, chatRepository, memoriesRepository, movieRepository, googleRepository, padletRepository } from '../variables/repositoryLink'
 
 const Projects = () => {
 
@@ -34,6 +34,7 @@ const Projects = () => {
           <Project isVisible={isVisible} title="Youtube Clone App" stack={youtubeStack} image='/youtube.png' projectLink={youtubeLink} codeLink={youtubeRepository}/>   
           <Project isVisible={isVisible} title="Memories App" stack={memoriesStack} image='/memories-project.png' projectLink={memoriesLink} codeLink={memoriesRepository}/>   
           <Project isVisible={isVisible} title="Google Browser Clone" stack={googleStack} image='/google.png' projectLink={googleLink} codeLink={googleRepository}/>
+          <Project isVisible={isVisible} title="Padlet clone application" stack={padletStack} image="/padlet.png" projectLink={padletLink} codeLink={padletRepository} />
         </div>
     </div>
   )
